@@ -28,16 +28,25 @@ printFavoriteFruit();
 
 // code reused from #1
 
-let result = 1;
+// let result = 1;
+
+// const exponent = (number1, number2) => {
+//     for (let i = 0; i < number2; i++) {
+//         result *= number1;
+//     };
+// };
+
+// exponent(3, 5);
+// console.log(result);
+
+// OR using the exponential operator (tip by Milad):
 
 const exponent = (number1, number2) => {
-    for (let i = 0; i < number2; i++) {
-        result *= number1;
-    };
+    let result = number1 ** number2; 
+    return result;
 };
 
-exponent(3, 5);
-console.log(result);
+console.log(exponent(2, 8));
 
 // I can access the value of result only if I declare it outside the function scope, then invoke the function, which executes the code block in it and reassignes the new value and THEN print result to the console.
 // Without invoking the function I get only the value assigned to result before the function.
